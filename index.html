@@ -321,10 +321,11 @@
     // Function to generate the trial textures
     function generateTrialTextures() {
         var trial_textures = [];
-        var texture_arr_copy = [...texture_arr]; // Make a copy to avoid modifying the original texture array
+        //var texture_arr_copy = [...texture_arr]; // Make a copy to avoid modifying the original texture array
 
         // Loop to fill each trial texture item
         for (let i = 0; i < 80; i++) {
+            var texture_arr_copy = [...texture_arr];
             // Select the current "head" texture
             let headIndex = Math.floor(Math.random() * texture_arr_copy.length);
             let head = texture_arr_copy.splice(headIndex, 1)[0]; // Remove the chosen head texture
