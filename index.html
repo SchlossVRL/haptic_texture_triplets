@@ -324,7 +324,7 @@
         var texture_arr_copy = [...texture_arr]; // Make a copy to avoid modifying the original texture array
 
         // Loop to fill each trial texture item
-        for (let i = 0; i < 40; i++) {
+        for (let i = 0; i < 80; i++) {
             // Select the current "head" texture
             let headIndex = Math.floor(Math.random() * texture_arr_copy.length);
             let head = texture_arr_copy.splice(headIndex, 1)[0]; // Remove the chosen head texture
@@ -371,7 +371,7 @@
     }
 
     //actually grabbing them
-    var selected_validation_textures = getRandom(validation_textures, 2); //
+    var selected_validation_textures = getRandom(validation_textures, 4); //
     var validation_shuffled_doubled = jsPsych.randomization.repeat(
         selected_validation_textures,
         2
@@ -484,7 +484,7 @@
         randomize_order: true,
         sample: {
             type: "with-replacement",
-            size: 11,
+            size: 22,
         },
     };
 
